@@ -9,12 +9,12 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative bg-[#003366] text-white">
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=400&width=1920"
             alt="Logistics services"
             fill
             className="object-cover opacity-30"
-          />
+          /> */}
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Logistics Services</h1>

@@ -24,13 +24,17 @@ export default function Home() {
               Your trusted partner for reliable, efficient, and safe transportation solutions across the nation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact" scroll={true}>
               <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white px-8 py-6 text-lg">Get a Quote</Button>
+              </Link>
+              <Link href="/services" scroll={true}>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#003366] px-8 py-6 text-lg"
+                className="border-white text-black hover:bg-[#e5e5e5] hover:text-[#003366] px-8 py-6 text-lg"
               >
                 Our Services
               </Button>
+              </Link>
             </div>
           </div>
         </div>

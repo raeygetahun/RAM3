@@ -4,8 +4,11 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { usePathname } from "next/navigation"
+
 
 export default function Navigation() {
+  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -26,7 +29,7 @@ export default function Navigation() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2" scroll={true}>
-            <span className="text-xl font-bold">TransCargo Logistics</span>
+            <span className="text-xl font-bold">RAM Trucking Group</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,13 +38,17 @@ export default function Navigation() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-[#99CCFF] transition-colors"
+                className={`text-white hover:text-[#99CCFF] transition-colors ${
+                  pathname === link.href ? "font-bold " : ""
+                }`}
                 scroll={true}
               >
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white">Get a Quote</Button>
+            <Link href="/contact" scroll={true} className="w-full">
+              <Button className="w-full bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-2">Get a Quote</Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,7 +71,9 @@ export default function Navigation() {
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-2">Get a Quote</Button>
+            <Link href="/contact" scroll={true} className="w-full">
+              <Button className="w-full bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-2">Get a Quote</Button>
+            </Link>
           </nav>
         )}
       </div>

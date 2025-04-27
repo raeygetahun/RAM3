@@ -48,12 +48,12 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative bg-[#003366] text-white">
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=400&width=1920"
             alt="Contact us"
             fill
             className="object-cover opacity-30"
-          />
+          /> */}
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -76,7 +76,7 @@ export default function Contact() {
                   <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-green-800 mb-2">Message Sent Successfully!</h3>
                   <p className="text-green-700 mb-4">
-                    Thank you for contacting TransCargo Logistics. We'll get back to you as soon as possible.
+                    Thank you for contacting RAM Trucking Group. We'll get back to you as soon as possible.
                   </p>
                   <Button
                     onClick={() => setFormStatus("idle")}
@@ -299,7 +299,7 @@ export default function Contact() {
             <Image src="/placeholder.svg?height=400&width=1200" alt="Map location" fill className="object-cover" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-white p-4 rounded-lg shadow-lg max-w-md">
-                <h3 className="font-bold text-[#003366] mb-2">TransCargo Logistics Headquarters</h3>
+                <h3 className="font-bold text-[#003366] mb-2">RAM Trucking Group Headquarters</h3>
                 <p className="text-[#333333]">
                   123 Logistics Way
                   <br />

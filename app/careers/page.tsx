@@ -110,12 +110,12 @@ export default function Careers() {
       {/* Hero Section */}
       <section className="relative bg-[#003366] text-white">
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=400&width=1920"
             alt="Careers at TransCargo"
             fill
             className="object-cover opacity-30"
-          />
+          /> */}
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
@@ -131,7 +131,7 @@ export default function Careers() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Why Work With Us</h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
-              At TransCargo Logistics, we believe our people are our greatest asset. Here's why you should consider
+              At RAM Trucking Group, we believe our people are our greatest asset. Here's why you should consider
               joining our team:
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function Careers() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Our Application Process</h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
-              Here's what to expect when you apply for a position at TransCargo Logistics.
+              Here's what to expect when you apply for a position at RAM Trucking Group.
             </p>
           </div>
 
@@ -337,7 +337,7 @@ export default function Careers() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Employee Testimonials</h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
-              Hear from our team members about their experiences working at TransCargo Logistics.
+              Hear from our team members about their experiences working at RAM Trucking Group.
             </p>
           </div>
 
@@ -472,7 +472,7 @@ export default function Careers() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-[#003366] mb-6">Ready to Join Our Team?</h2>
           <p className="text-[#333333] max-w-2xl mx-auto mb-8">
-            Explore our current openings and take the first step toward a rewarding career with TransCargo Logistics.
+            Explore our current openings and take the first step toward a rewarding career with RAM Trucking Group.
           </p>
           <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white px-8 py-6 text-lg">
             View All Job Openings

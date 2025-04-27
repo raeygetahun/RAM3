@@ -9,7 +9,7 @@ import ScrollToTop from "@/utils/scroll-to-top"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TransCargo Logistics",
+  title: "RAM Trucking Group",
   description: "Professional trucking and logistics services",
     generator: 'v0.dev'
 }

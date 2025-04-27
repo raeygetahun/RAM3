@@ -9,15 +9,15 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative bg-[#003366] text-white">
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=400&width=1920"
             alt="Company headquarters"
             fill
             className="object-cover opacity-30"
-          />
+          /> */}
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About TransCargo Logistics</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About RAM Trucking Group</h1>
           <p className="text-xl max-w-3xl mx-auto">
             A trusted name in the logistics industry with over 25 years of experience delivering excellence.
           </p>
@@ -31,7 +31,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-[#003366] mb-6">Our Story</h2>
               <p className="text-[#333333] mb-4">
-                Founded in 1995, TransCargo Logistics began with just three trucks and a vision to provide reliable
+                RAM Trucking Group began with just three trucks and a vision to provide reliable
                 transportation services. Our founder, Robert Johnson, recognized the need for a logistics company that
                 truly understood the challenges businesses face in moving their goods efficiently and safely.
               </p>
