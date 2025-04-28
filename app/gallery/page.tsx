@@ -75,17 +75,17 @@ export default function Gallery() {
       category: "Fleet",
     },
     {
-      src: "./image15.JPG?height=400&width=600",
+      src: "./image15.jpg?height=400&width=600",
       alt: "Truck parked in warehouse",
       category: "Fleet",
     },
     {
-      src: "./image16.JPG?height=400&width=600",
+      src: "./image16.jpg?height=400&width=600",
       alt: "Truck near warehouse",
       category: "Fleet",
     },
     {
-      src: "./image17.JPG?height=400&width=600",
+      src: "./image17.jpg?height=400&width=600",
       alt: "Truck near warehouse",
       category: "Fleet",
     },
