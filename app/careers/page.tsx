@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 import {
   Briefcase,
   MapPin,
@@ -30,6 +31,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Operations",
+      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
       description:
         "We're looking for experienced CDL drivers to join our growing fleet. You'll be responsible for safely transporting goods across the country while representing our company with professionalism.",
       requirements: [
@@ -45,6 +47,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Operations",
+      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
       description:
         "As a Logistics Coordinator, you'll play a crucial role in ensuring the efficient movement of freight by coordinating with drivers, customers, and warehouse staff.",
       requirements: [
@@ -75,6 +78,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Maintenance",
+      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
       description:
         "Help keep our fleet in top condition by performing regular maintenance and repairs on our trucks and trailers.",
       requirements: [
@@ -298,9 +302,11 @@ export default function Careers() {
                     </h3>
                     <p className="text-[#FF6600]">{job.department}</p>
                   </div>
+                  <Link href={job.applyLink} target="_blank" rel="noopener noreferrer">
                   <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-4 md:mt-0">
                     Apply Now
                   </Button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap gap-4 mb-4">
