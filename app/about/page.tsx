@@ -44,8 +44,8 @@ export default function About() {
             <AnimatedText text="Our Story" className="text-3xl font-bold text-[#003366] mb-6" tag="h2" />
           <AnimatedSection delay={0.3}>
             <p className="text-[#333333] mb-4">
-              Founded in 1995, TransCargo Logistics began with just three trucks and a vision to provide reliable
-              transportation services. Our founder, Robert Johnson, recognized the need for a logistics company that
+              RAM Trucking Group began with just three trucks and a vision to provide reliable
+              transportation services. Our founder, Dainel Getahun, recognized the need for a logistics company that
               truly understood the challenges businesses face in moving their goods efficiently and safely.
             </p>
           </AnimatedSection>

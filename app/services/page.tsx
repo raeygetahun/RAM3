@@ -138,7 +138,7 @@ export default function Services() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Comprehensive Logistics Solutions</h2>
               <p className="text-[#333333] max-w-2xl mx-auto">
-                At TransCargo, we offer a wide range of logistics services designed to meet the diverse needs of
+                At RAM Trucking Group, we offer a wide range of logistics services designed to meet the diverse needs of
                 businesses across industries.
               </p>
           </div>

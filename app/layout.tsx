@@ -11,7 +11,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "RAM Trucking Group",
   description: "Professional trucking and logistics services",
-    generator: 'v0.dev'
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
