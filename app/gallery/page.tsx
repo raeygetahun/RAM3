@@ -1,78 +1,107 @@
 "use client"
-
+import { useMemo } from "react"
 import { useState } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
+import { AnimatedSection } from "@/components/ui/animated-section"
+import { AnimatedText } from "@/components/ui/animated-text"
+import { AnimatedIcon } from "@/components/ui/animated-icon"
+import { AnimatedCard } from "@/components/ui/animated-card"
+import { AnimatedButton } from "@/components/ui/animated-button"
+import { motion } from "framer-motion"
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const galleryImages = [
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Modern truck on highway",
+      src: "/image3.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
       category: "Fleet",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Warehouse operations",
-      category: "Warehousing",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Loading dock activity",
-      category: "Operations",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Logistics team meeting",
-      category: "Team",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Cross-country shipping",
+      src: "/image4.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
       category: "Fleet",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Package sorting facility",
-      category: "Operations",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Driver with delivery",
-      category: "Team",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Aerial view of distribution center",
-      category: "Warehousing",
-    },
-    {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Truck fleet lineup",
+      src: "/image5.JPG?height=400&width=600",
+      alt: "Truck at loading dock",
       category: "Fleet",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Customer service team",
-      category: "Team",
+      src: "/image6.JPG?height=400&width=600",
+      alt: "Truck at loading dock",
+      category: "Fleet",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Loading cargo",
-      category: "Operations",
+      src: "/image7.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
+      category: "Fleet",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
-      alt: "Warehouse interior",
-      category: "Warehousing",
+      src: "/image8.JPG?height=400&width=600",
+      alt: "Aerial view of trucks at distribution center",
+      category: "Fleet",
+    },
+    {
+      src: "/image9.JPG?height=400&width=600",
+      alt: "Truck driver with delivery",
+      category: "Fleet",
+    },
+    {
+      src: "/image10.JPG?height=400&width=600",
+      alt: "Aerial view of trucks at distribution center",
+      category: "Fleet",
+    },
+    {
+      src: "/image11.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
+      category: "Fleet",
+    },
+    {
+      src: "/image12.JPG?height=400&width=600",
+      alt: "Truck at loading dock",
+      category: "Fleet",
+    },
+    {
+      src: "/image13.JPG?height=400&width=600",
+      alt: "Truck being maintained",
+      category: "Fleet",
+    },
+    {
+      src: "/image14.JPG?height=400&width=600",
+      alt: "Truck being loaded with cargo",
+      category: "Fleet",
+    },
+    {
+      src: "/image15.JPG?height=400&width=600",
+      alt: "Truck parked in warehouse",
+      category: "Fleet",
+    },
+    {
+      src: "/image16.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
+      category: "Fleet",
+    },
+    {
+      src: "/image17.JPG?height=400&width=600",
+      alt: "Truck near warehouse",
+      category: "Fleet",
     },
   ]
 
   const [filter, setFilter] = useState<string | null>(null)
   const filteredImages = filter ? galleryImages.filter((img) => img.category === filter) : galleryImages
 
+  const shuffledImages = useMemo(() => {
+    const shuffled = [...filteredImages];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }, [filteredImages]);
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -87,7 +116,9 @@ export default function Gallery() {
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Gallery</h1>
+          <AnimatedSection delay={1.3}>
           <p className="text-xl max-w-3xl mx-auto">Take a visual journey through our operations, fleet, and team.</p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -128,7 +159,7 @@ export default function Gallery() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredImages.map((image, index) => (
+            {shuffledImages.map((image, index) => (
               <div
                 key={index}
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-lg"
@@ -177,7 +208,7 @@ export default function Gallery() {
 
           <button
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 p-2 rounded-full"
-            onClick={() => setSelectedImage((prev) => (prev === 0 ? filteredImages.length - 1 : prev - 1))}
+            onClick={() => setSelectedImage((prev) => (prev === 0 ? filteredImages.length - 1 : prev? prev - 1: 0))}
           >
             <span className="sr-only">Previous</span>
             <svg
@@ -198,7 +229,7 @@ export default function Gallery() {
 
           <button
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 p-2 rounded-full"
-            onClick={() => setSelectedImage((prev) => (prev === filteredImages.length - 1 ? 0 : prev + 1))}
+            onClick={() => setSelectedImage((prev) => (prev === filteredImages.length - 1 ? 0 : prev? prev + 1: 1))}
           >
             <span className="sr-only">Next</span>
             <svg

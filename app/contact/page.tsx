@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { AnimatedText } from "@/components/ui/animated-text";
+import { AnimatedIcon } from "@/components/ui/animated-icon";
+import { AnimatedCard } from "@/components/ui/animated-card";
+import { AnimatedButton } from "@/components/ui/animated-button";
+import { motion } from "framer-motion";
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,20 +26,22 @@ export default function Contact() {
     company: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormStatus("submitting")
+    e.preventDefault();
+    setFormStatus("submitting");
 
     // Simulate form submission
     setTimeout(() => {
-      setFormStatus("success")
+      setFormStatus("success");
       setFormData({
         name: "",
         email: "",
@@ -39,9 +49,9 @@ export default function Contact() {
         company: "",
         subject: "",
         message: "",
-      })
-    }, 1500)
-  }
+      });
+    }, 1500);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -57,9 +67,12 @@ export default function Contact() {
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            We're here to answer your questions and provide the logistics solutions you need.
-          </p>
+          <AnimatedSection delay={1.3}>
+            <p className="text-xl max-w-3xl mx-auto">
+              We're here to answer your questions and provide the logistics
+              solutions you need.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -69,14 +82,19 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-[#F2F2F2] p-8 rounded-lg">
-              <h2 className="text-2xl font-bold text-[#003366] mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold text-[#003366] mb-6">
+                Send Us a Message
+              </h2>
 
               {formStatus === "success" ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
                   <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-green-800 mb-2">Message Sent Successfully!</h3>
+                  <h3 className="text-xl font-bold text-green-800 mb-2">
+                    Message Sent Successfully!
+                  </h3>
                   <p className="text-green-700 mb-4">
-                    Thank you for contacting RAM Trucking Group. We'll get back to you as soon as possible.
+                    Thank you for contacting RAM Trucking Group. We'll get back
+                    to you as soon as possible.
                   </p>
                   <Button
                     onClick={() => setFormStatus("idle")}
@@ -89,7 +107,10 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-[#333333] mb-1">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-[#333333] mb-1"
+                      >
                         Full Name *
                       </label>
                       <Input
@@ -99,11 +120,14 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full"
-                        placeholder="John Doe"
+                        placeholder=""
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-[#333333] mb-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-[#333333] mb-1"
+                      >
                         Email Address *
                       </label>
                       <Input
@@ -121,7 +145,10 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-[#333333] mb-1">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-[#333333] mb-1"
+                      >
                         Phone Number
                       </label>
                       <Input
@@ -134,7 +161,10 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-[#333333] mb-1">
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-medium text-[#333333] mb-1"
+                      >
                         Company Name
                       </label>
                       <Input
@@ -149,7 +179,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-[#333333] mb-1">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-[#333333] mb-1"
+                    >
                       Subject *
                     </label>
                     <Input
@@ -164,7 +197,10 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[#333333] mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-[#333333] mb-1"
+                    >
                       Message *
                     </label>
                     <Textarea
@@ -183,7 +219,9 @@ export default function Contact() {
                     className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white w-full py-6"
                     disabled={formStatus === "submitting"}
                   >
-                    {formStatus === "submitting" ? "Sending..." : "Send Message"}
+                    {formStatus === "submitting"
+                      ? "Sending..."
+                      : "Send Message"}
                   </Button>
                 </form>
               )}
@@ -191,21 +229,27 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold text-[#003366] mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-bold text-[#003366] mb-6">
+                Get in Touch
+              </h2>
               <p className="text-[#333333] mb-8">
-                Have questions about our services or need a quote? Our team is ready to assist you. Contact us through
-                any of the methods below or fill out the form, and we'll get back to you as soon as possible.
+                Have questions about our services or need a quote? Our team is
+                ready to assist you. Contact us through any of the methods below
+                or fill out the form, and we'll get back to you as soon as
+                possible.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 text-[#FF6600] mr-4 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#003366] mb-1">Our Headquarters</h3>
+                    <h3 className="font-bold text-[#003366] mb-1">
+                      Our Headquarters
+                    </h3>
                     <p className="text-[#333333]">
-                      123 Logistics Way
+                      4409 EMDEN Street
                       <br />
-                      Trucking City, TC 12345
+                      Silver Spring, MD, 20906
                       <br />
                       United States
                     </p>
@@ -217,11 +261,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-[#003366] mb-1">Phone</h3>
                     <p className="text-[#333333]">
-                      Main: (555) 123-4567
+                      Main: +1 (240) 4332947
                       <br />
-                      Toll-Free: 1-800-TRUCKING
-                      <br />
-                      Fax: (555) 765-4321
+                      Secondary: +1 (240) 7074513
                     </p>
                   </div>
                 </div>
@@ -231,11 +273,11 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-[#003366] mb-1">Email</h3>
                     <p className="text-[#333333]">
-                      General Inquiries: info@transcargo.com
+                      General Inquiries: trucking@RAM Trucking Group.com
                       <br />
-                      Customer Support: support@transcargo.com
+                      Customer Support: support@RAM Trucking Group.com
                       <br />
-                      Careers: careers@transcargo.com
+                      Careers: careers@RAM Trucking Group.com
                     </p>
                   </div>
                 </div>
@@ -243,7 +285,9 @@ export default function Contact() {
                 <div className="flex items-start">
                   <Clock className="h-6 w-6 text-[#FF6600] mr-4 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#003366] mb-1">Business Hours</h3>
+                    <h3 className="font-bold text-[#003366] mb-1">
+                      Business Hours
+                    </h3>
                     <p className="text-[#333333]">
                       Monday - Friday: 8:00 AM - 6:00 PM
                       <br />
@@ -255,11 +299,15 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h3 className="font-bold text-[#003366] mb-4">Regional Offices</h3>
+              {/* <div className="mt-8">
+                <h3 className="font-bold text-[#003366] mb-4">
+                  Regional Offices
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="bg-[#F2F2F2] p-4 rounded-lg">
-                    <h4 className="font-bold text-[#003366]">West Coast Office</h4>
+                    <h4 className="font-bold text-[#003366]">
+                      West Coast Office
+                    </h4>
                     <p className="text-[#333333] text-sm">
                       456 Pacific Highway
                       <br />
@@ -269,7 +317,9 @@ export default function Contact() {
                     </p>
                   </div>
                   <div className="bg-[#F2F2F2] p-4 rounded-lg">
-                    <h4 className="font-bold text-[#003366]">East Coast Office</h4>
+                    <h4 className="font-bold text-[#003366]">
+                      East Coast Office
+                    </h4>
                     <p className="text-[#333333] text-sm">
                       789 Atlantic Avenue
                       <br />
@@ -279,27 +329,35 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-[#F2F2F2]">
+      {/* <section className="py-16 bg-[#F2F2F2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Find Us</h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
-              Our strategic locations allow us to serve customers efficiently across the country.
+              Our strategic locations allow us to serve customers efficiently
+              across the country.
             </p>
           </div>
 
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg?height=400&width=1200" alt="Map location" fill className="object-cover" />
+            <Image
+              src="/placeholder.svg?height=400&width=1200"
+              alt="Map location"
+              fill
+              className="object-cover"
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-white p-4 rounded-lg shadow-lg max-w-md">
-                <h3 className="font-bold text-[#003366] mb-2">RAM Trucking Group Headquarters</h3>
+                <h3 className="font-bold text-[#003366] mb-2">
+                  RAM Trucking Group Headquarters
+                </h3>
                 <p className="text-[#333333]">
                   123 Logistics Way
                   <br />
@@ -307,18 +365,22 @@ export default function Contact() {
                   <br />
                   United States
                 </p>
-                <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-4">Get Directions</Button>
+                <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white mt-4">
+                  Get Directions
+                </Button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#003366] mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-[#003366] mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
               Find quick answers to common questions about our services.
             </p>
@@ -348,7 +410,9 @@ export default function Contact() {
               },
             ].map((faq, index) => (
               <div key={index} className="bg-[#F2F2F2] p-6 rounded-lg">
-                <h3 className="text-lg font-bold text-[#003366] mb-2">{faq.question}</h3>
+                <h3 className="text-lg font-bold text-[#003366] mb-2">
+                  {faq.question}
+                </h3>
                 <p className="text-[#333333]">{faq.answer}</p>
               </div>
             ))}
@@ -356,5 +420,5 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  )
+  );
 }

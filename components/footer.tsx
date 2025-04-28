@@ -1,5 +1,13 @@
-import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,8 +17,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">RAM Trucking Group</h3>
             <p className="mb-4">
-              Providing reliable trucking and logistics solutions since 1995. Your trusted partner for all your
-              transportation needs.
+              Providing reliable trucking and logistics solutions. Your trusted
+              partner for all your transportation needs.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-[#99CCFF]" scroll={true}>
@@ -41,27 +49,47 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/about"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/gallery"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/careers"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Careers
                 </Link>
               </li>
@@ -72,27 +100,47 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Freight Shipping
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Express Delivery
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Warehousing
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Supply Chain Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#99CCFF]" scroll={true}>
+                <Link
+                  href="/services"
+                  className="hover:text-[#99CCFF]"
+                  scroll={true}
+                >
                   Cross-Border Logistics
                 </Link>
               </li>
@@ -104,24 +152,41 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-[#FF6600]" />
-                <span>123 Logistics Way, Trucking City, TC 12345</span>
+                <span>4409 EMDEN Street Silver Spring, MD, 20906</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-[#FF6600]" />
-                <span>(555) 123-4567</span>
+                <span>+1 (240) 4332947</span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="mr-2 h-5 w-5 text-[#FF6600]" />
+                <span>+1 (240) 7074513</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-[#FF6600]" />
-                <span>info@transcargo.com</span>
+                <span>trucking@ramtruckingroup.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} RAM Trucking Group. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} RAM Trucking Group. All rights
+            reserved.
+          </p>
+          <p className="text-lg mt-2">
+            Built by{" "}
+            <a
+              href="https://algonixtechnologies.com/"
+              target="_blank"
+              className="text-[#99CCFF] font-bold hover:text-[#66CCFF]"
+              >
+              Algonix Technologies
+            </a>
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

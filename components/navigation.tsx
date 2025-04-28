@@ -33,8 +33,8 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -59,12 +59,14 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 space-y-3 pb-3">
+          <nav className="md:hidden mt-4 space-y-3 pb-3 flex flex-col items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block text-white hover:text-[#99CCFF] py-2 transition-colors"
+                className={`block text-white hover:text-[#99CCFF] py-2 transition-colors ${
+                  pathname === link.href ? "font-bold " : ""
+                }`}
                 onClick={() => setIsMenuOpen(false)}
                 scroll={true}
               >

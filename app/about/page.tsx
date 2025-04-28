@@ -1,7 +1,15 @@
+"use client"
+
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { CheckCircle, Award, Users, Clock } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Award, Users, Clock } from "lucide-react";
+import Link from "next/link";
+import { AnimatedSection } from "@/components/ui/animated-section"
+import { AnimatedText } from "@/components/ui/animated-text"
+import { AnimatedIcon } from "@/components/ui/animated-icon"
+import { AnimatedCard } from "@/components/ui/animated-card"
+import { AnimatedButton } from "@/components/ui/animated-button"
+import { motion } from "framer-motion"
 
 export default function About() {
   return (
@@ -17,10 +25,14 @@ export default function About() {
           /> */}
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About RAM Trucking Group</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            A trusted name in the logistics industry with over 25 years of experience delivering excellence.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            About RAM Trucking Group
+          </h1>
+          <AnimatedSection delay={1.3}>
+            <p className="text-xl max-w-3xl mx-auto">
+              A trusted name in the logistics industry with over 25 years of experience delivering excellence.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -29,30 +41,43 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#003366] mb-6">Our Story</h2>
-              <p className="text-[#333333] mb-4">
-                RAM Trucking Group began with just three trucks and a vision to provide reliable
-                transportation services. Our founder, Robert Johnson, recognized the need for a logistics company that
-                truly understood the challenges businesses face in moving their goods efficiently and safely.
-              </p>
-              <p className="text-[#333333] mb-4">
-                From those humble beginnings, we've grown into one of the region's most trusted logistics providers,
-                with a fleet of over 200 vehicles and a comprehensive range of services that span the entire supply
-                chain.
-              </p>
-              <p className="text-[#333333] mb-4">
-                Throughout our journey, we've remained committed to our founding principles: reliability, integrity, and
-                customer satisfaction. These values continue to guide every aspect of our operations as we expand our
-                services and reach.
-              </p>
+            <AnimatedText text="Our Story" className="text-3xl font-bold text-[#003366] mb-6" tag="h2" />
+          <AnimatedSection delay={0.3}>
+            <p className="text-[#333333] mb-4">
+              Founded in 1995, TransCargo Logistics began with just three trucks and a vision to provide reliable
+              transportation services. Our founder, Robert Johnson, recognized the need for a logistics company that
+              truly understood the challenges businesses face in moving their goods efficiently and safely.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.5}>
+            <p className="text-[#333333] mb-4">
+              From those humble beginnings, we've grown into one of the region's most trusted logistics providers, with
+              a fleet of over 200 vehicles and a comprehensive range of services that span the entire supply chain.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.7}>
+            <p className="text-[#333333] mb-4">
+              Throughout our journey, we've remained committed to our founding principles: reliability, integrity, and
+              customer satisfaction. These values continue to guide every aspect of our operations as we expand our
+              services and reach.
+            </p>
+          </AnimatedSection>
             </div>
             <div className="relative h-[400px]">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Company history"
-                fill
-                className="object-cover rounded-lg"
-              />
+              <motion.div
+                  initial={{ scale: 1 }}
+                  whileInView={{ scale: 1.05 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: true }}
+                  className="relative h-[400px] overflow-hidden rounded-lg"
+                >
+                  <Image
+                    src="/truck01.jpg?height=400&width=600"
+                    alt="Modern truck fleet"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                </motion.div>
             </div>
           </div>
         </div>
@@ -62,11 +87,13 @@ export default function About() {
       <section className="py-16 bg-[#F2F2F2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#003366] mb-4">Our Mission & Vision</h2>
+            <h2 className="text-3xl font-bold text-[#003366] mb-4">
+              Our Mission & Vision
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <AnimatedCard delay={0.3} className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold text-[#003366] mb-4">Our Mission</h3>
               <p className="text-[#333333] mb-4">
                 To provide innovative logistics solutions that optimize our clients' supply chains, enabling them to
@@ -76,9 +103,9 @@ export default function About() {
                 We strive to deliver value through reliability, efficiency, and exceptional customer service, building
                 long-term partnerships with our clients.
               </p>
-            </div>
+            </AnimatedCard>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <AnimatedCard delay={0.5} className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold text-[#003366] mb-4">Our Vision</h3>
               <p className="text-[#333333] mb-4">
                 To be the leading logistics provider known for setting industry standards in service quality,
@@ -88,7 +115,7 @@ export default function About() {
                 We aim to expand our reach while maintaining the personalized service that has been the cornerstone of
                 our success, adapting to the evolving needs of global commerce.
               </p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -97,10 +124,12 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#003366] mb-4">Our Core Values</h2>
+            <h2 className="text-3xl font-bold text-[#003366] mb-4">
+              Our Core Values
+            </h2>
             <p className="text-[#333333] max-w-2xl mx-auto">
-              These principles guide our decisions, shape our culture, and define how we interact with our clients,
-              partners, and each other.
+              These principles guide our decisions, shape our culture, and
+              define how we interact with our clients, partners, and each other.
             </p>
           </div>
 
@@ -131,18 +160,25 @@ export default function About() {
                   "We optimize our operations to maximize efficiency, saving time and resources for our clients and ourselves.",
               },
             ].map((value, index) => (
-              <div key={index} className="bg-[#F2F2F2] p-6 rounded-lg text-center">
-                <div className="flex justify-center mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-[#003366] mb-2">{value.title}</h3>
+              <AnimatedCard
+                key={index}
+                className="bg-[#F2F2F2] p-6 rounded-lg text-center"
+              >
+                <AnimatedIcon delay={index * 0.25 + 0.3} className="flex justify-center mb-4">{value.icon}
+                </AnimatedIcon>
+                <h3 className="text-xl font-bold text-[#003366] mb-2">
+                  {value.title}
+                </h3>
                 <p className="text-[#333333]">{value.description}</p>
-              </div>
+              
+                </AnimatedCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Leadership Team */}
-      <section className="py-16 bg-[#F2F2F2]">
+      {/* <section className="py-16 bg-[#F2F2F2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#003366] mb-4">Our Leadership Team</h2>
@@ -156,7 +192,7 @@ export default function About() {
               {
                 name: "Robert Johnson",
                 position: "Founder & CEO",
-                bio: "With over 30 years in the logistics industry, Robert founded TransCargo with a vision to revolutionize how businesses handle their transportation needs.",
+                bio: "With over 30 years in the logistics industry, Robert founded RAM Trucking Group with a vision to revolutionize how businesses handle their transportation needs.",
                 image: "/placeholder.svg?height=300&width=300",
               },
               {
@@ -201,29 +237,33 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-[#003366] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Journey</h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg">
-            Whether you're looking for a logistics partner or interested in career opportunities, we'd love to hear from
-            you.
+            Whether you're looking for a logistics partner or interested in
+            career opportunities, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white px-8 py-6 text-lg">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#003366] px-8 py-6 text-lg"
-            >
-              <Link href="/careers">View Careers</Link>
-            </Button>
+            <Link href="/contact">
+              <AnimatedButton className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white px-8 py-6 text-lg">
+                Contact Us
+              </AnimatedButton>
+            </Link>
+            <Link href="/careers">
+              <AnimatedButton
+                variant="outline"
+                className="border-text-white text-black hover:bg-white hover:text-[#003366] px-8 py-6 text-lg"
+              >
+                View Careers
+              </AnimatedButton>
+            </Link>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
