@@ -19,7 +19,7 @@ export default function Home() {
           {/* Mobile Image */}
           <div className="block md:hidden">
             <Image
-              src="/truck02mob.jpg?height=800&width=600"
+              src="./truck02mob.jpg?height=800&width=600"
               alt="Logistics truck on highway (mobile)"
               fill
               className="object-cover opacity-70"
@@ -30,7 +30,7 @@ export default function Home() {
           {/* Desktop Image */}
           <div className="hidden md:block">
             <Image
-              src="/truck02.jpg?height=800&width=1920"
+              src="./truck02.jpg?height=800&width=1920"
               alt="Logistics truck on highway (desktop)"
               fill
               className="object-cover opacity-70"
@@ -188,7 +188,7 @@ export default function Home() {
                 className="relative h-[400px] overflow-hidden rounded-lg"
               >
                 <Image
-                  src="/truck04.jpg?height=400&width=600"
+                  src="./truck04.jpg?height=400&width=600"
                   alt="Modern truck fleet"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
