@@ -63,7 +63,7 @@ export default function About() {
             </p>
           </AnimatedSection>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] group overflow-hidden rounded-lg">
               <motion.div
                   initial={{ scale: 1 }}
                   whileInView={{ scale: 1.05 }}
