@@ -24,7 +24,7 @@ export default function Services() {
   const services = [
     {
       icon: <Package className="h-10 w-10 text-[#FF6600]" />, // Represents shared cargo for LTL
-      title: "LTL or Partial Truckload",
+      title: "Partial Truckload(LTL)",
       description:
         "Less than Truckload (LTL) shipping offers an efficient solution for shipments over 100 lbs that do not require a full truck. By sharing truck space with other shippers, businesses pay only for the portion they use, making LTL a cost-effective method for land transportation. While it provides significant savings, LTL shipping may involve less flexibility in routing and delivery times, as cargo space is shared among multiple shipments.",
       features: [],
@@ -35,7 +35,7 @@ export default function Services() {
     },
     {
       icon: <Truck className="h-10 w-10 text-[#FF6600]" />, // Represents a full truck for FTL
-      title: "FTL or Full Truckload",
+      title: "Full Truckload(FTL)",
       description:
         "Full Truckload (FTL) shipping is an ideal solution for transporting shipments that occupy an entire freight trailer (typically 8’–8.5’ wide, 12.5’–13.5’ high, and 40’–53’ long) or when a dedicated trailer is required for your goods. Choosing FTL provides greater control over routing and scheduling compared to Less Than Truckload (LTL) shipping, ensuring efficiency, security, and reliability for your freight.",
       features: [],
@@ -57,7 +57,7 @@ export default function Services() {
     },
     {
       icon: <Thermometer className="h-10 w-10 text-[#FF6600]" />, // Represents temperature control for reefer trucks
-      title: "Refrigerated Trucks or Reefer Trucks",
+      title: "Refrigerated Trucks(Reefer Trucks)",
       description:
         "Our temperature-controlled trucking services ensure the safe transport of perishable goods like produce, meats, cheeses, fish, poultry, and pharmaceutical or chemical products. These specialized trucks maintain precise control over temperature and humidity, with advanced monitoring and tracking for added security. We offer reliable Full Truckload (FTL) and Less Than Truckload (LTL) options, providing efficient and secure solutions for your transport needs.",
       features: [],

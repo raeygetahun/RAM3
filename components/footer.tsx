@@ -105,7 +105,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  LTL or Partial Truckload
+                  Partial Truckload(LTL){" "}
                 </Link>
               </li>
               <li>
@@ -114,7 +114,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  FTL or Full Truckload
+                  Full Truckload(FTL){" "}
                 </Link>
               </li>
               <li>
@@ -123,7 +123,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Flat Bed Trucking Service
+                  Flat Bed Trucking Service{" "}
                 </Link>
               </li>
               <li>
@@ -132,7 +132,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Refrigerated Trucks or Reefer Trucks
+                  Refrigerated Trucks(Reefer Trucks){" "}
                 </Link>
               </li>
               <li>
@@ -141,7 +141,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Expedited Trucking Service
+                  Expedited Trucking Service{" "}
                 </Link>
               </li>
             </ul>
@@ -181,7 +181,7 @@ export default function Footer() {
               href="https://algonixtechnologies.com/"
               target="_blank"
               className="text-[#99CCFF] font-bold hover:text-[#66CCFF]"
-              >
+            >
               Algonix Technologies
             </a>
           </p>
