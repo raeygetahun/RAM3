@@ -273,11 +273,11 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-[#003366] mb-1">Email</h3>
                     <p className="text-[#333333]">
-                      General Inquiries: trucking@RAM Trucking Group.com
+                      General Inquiries: tracking@ramtruckingroup.com
                       <br />
-                      Customer Support: support@RAM Trucking Group.com
+                      Customer Support: dispatch@ramtruckingroup.com
                       <br />
-                      Careers: careers@RAM Trucking Group.com
+                      Careers: careers@ramtruckingroup.com
                     </p>
                   </div>
                 </div>
