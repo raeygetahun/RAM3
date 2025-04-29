@@ -105,7 +105,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Freight Shipping
+                  LTL or Partial Truckload
                 </Link>
               </li>
               <li>
@@ -114,7 +114,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Express Delivery
+                  FTL or Full Truckload
                 </Link>
               </li>
               <li>
@@ -123,7 +123,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Warehousing
+                  Flat Bed Trucking Service
                 </Link>
               </li>
               <li>
@@ -132,7 +132,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Supply Chain Solutions
+                  Refrigerated Trucks or Reefer Trucks
                 </Link>
               </li>
               <li>
@@ -141,7 +141,7 @@ export default function Footer() {
                   className="hover:text-[#99CCFF]"
                   scroll={true}
                 >
-                  Cross-Border Logistics
+                  Expedited Trucking Service
                 </Link>
               </li>
             </ul>
