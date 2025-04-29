@@ -30,7 +30,7 @@ export default function About() {
           </h1>
           <AnimatedSection delay={1.3}>
             <p className="text-xl max-w-3xl mx-auto">
-              A trusted name in the logistics industry with over 25 years of experience delivering excellence.
+              A trusted name in the logistics industry with multiple years of experience delivering excellence.
             </p>
           </AnimatedSection>
         </div>
@@ -52,7 +52,7 @@ export default function About() {
           <AnimatedSection delay={0.5}>
             <p className="text-[#333333] mb-4">
               From those humble beginnings, we've grown into one of the region's most trusted logistics providers, with
-              a fleet of over 200 vehicles and a comprehensive range of services that span the entire supply chain.
+              a fleet of multiple vehicles and a comprehensive range of services that span the entire supply chain.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.7}>

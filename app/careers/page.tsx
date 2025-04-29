@@ -31,7 +31,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Operations",
-      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
+      applyLink:"https://account.neweratitans.com/apply/MjE5NA==",
       description:
         "We're looking for experienced CDL drivers to join our growing fleet. You'll be responsible for safely transporting goods across the country while representing our company with professionalism.",
       requirements: [
@@ -47,7 +47,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Operations",
-      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
+      applyLink:"https://account.neweratitans.com/apply/MjE5NA==",
       description:
         "As a Logistics Coordinator, you'll play a crucial role in ensuring the efficient movement of freight by coordinating with drivers, customers, and warehouse staff.",
       requirements: [
@@ -78,7 +78,7 @@ export default function Careers() {
       location: "Nationwide",
       type: "Full-time",
       department: "Maintenance",
-      applyLink:"https://www.mydriverfiles.com/ram-trucking-group-llc/apply/",
+      applyLink:"https://account.neweratitans.com/apply/MjE5NA==",
       description:
         "Help keep our fleet in top condition by performing regular maintenance and repairs on our trucks and trailers.",
       requirements: [
