@@ -45,7 +45,7 @@ export default function About() {
           <AnimatedSection delay={0.3}>
             <p className="text-[#333333] mb-4">
               RAM Trucking Group began with just three trucks and a vision to provide reliable
-              transportation services. Our founder, Dainel Getahun, recognized the need for a logistics company that
+              transportation services. Our founder, Dainel Addisu, recognized the need for a logistics company that
               truly understood the challenges businesses face in moving their goods efficiently and safely.
             </p>
           </AnimatedSection>
