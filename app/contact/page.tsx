@@ -22,10 +22,11 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    number: "",
     company: "",
     subject: "",
     message: "",
+    address: "RAMTRUCK"
   });
 
   const handleChange = (
@@ -35,22 +36,37 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
-
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "",
-        message: "",
+  
+    try {
+      const response = await fetch("http://192.145.44.140:3050/contact-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+  
+      if (response.ok) {
+        setFormStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          number: "",
+          company: "",
+          subject: "",
+          message: "",
+          address: "RAMTRUCK"
+        });
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setFormStatus("error");
+    }
   };
 
   return (
@@ -146,15 +162,15 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
-                        htmlFor="phone"
+                        htmlFor="number"
                         className="block text-sm font-medium text-[#333333] mb-1"
                       >
                         Phone Number
                       </label>
                       <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
+                        id="number"
+                        name="number"
+                        value={formData.number}
                         onChange={handleChange}
                         className="w-full"
                         placeholder="(555) 123-4567"
