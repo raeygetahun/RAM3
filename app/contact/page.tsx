@@ -41,7 +41,7 @@ export default function Contact() {
     setFormStatus("submitting");
   
     try {
-      const response = await fetch("http://192.145.44.140:3050/contact-form", {
+      const response = await fetch("https://192.145.44.140:3050/contact-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
